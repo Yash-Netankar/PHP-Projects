@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-size: 62.5%;
+    font-family:'Poppins';
+    background: #ecf0f1;
+}
+/*******************
+NAVIGATION BAR
+*******************/
+nav{
+    padding: .5rem .3rem;
+    background: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo{
+    font-size: 1.1rem;
+    font-family:'Montserrat';
+    cursor: pointer;
+}
+nav ul{
+    width: 45%;
+    height: 100%;
+    padding: .5rem .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li a{
+    padding-bottom: 3px;
+    font-family: 'Roboto';
+    font-size: .9rem;
+    font-weight: 100;
+    -webkit-font-weight: 100;
+    color:#bdc3c7;
+    position: relative;
+    letter-spacing: 1px;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background:#bdc3c7;
+    transition: .3s;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+nav ul .fa-bars{
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+}
+nav ul .logout,
+nav ul .login{
+    color: #ecf0f1;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    box-shadow: inset 1px 3px 7px #ffffff73,
+    inset -3px -3px 5px rgba(94,104,121,.488 
+    );
+}
+/*******************
+THREADS Page
+*******************/
+.thread-head{
+    width: 70%;
+    padding: 10px 10px;
+    margin: 1rem auto;
+    background: #bdc3c7;
+}
+.thread-jumbotron h1{
+    font-size: 1.2rem;
+}
+.thread-jumbotron p{
+    font-family: "Poppins";
+    font-size: 1rem;
+}
+.thread-notice-container{
+    margin-top: .8rem;
+    padding: 5px 10px;
+    border-top: 1px solid #353b48;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.show-notice-container{
+    height: auto;
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+.thread-jumbotron .show-notice{
+    padding: .5rem 1rem;
+    color: #ecf0f1;
+    background: royalblue;
+    font-family: "Montserrat";
+}
+
+/* questions & answers */
+.thread-container{
+    width: 80%;
+    max-width: 80%;
+    padding: .5rem 1rem;
+    background: #d1d8e0;
+    margin: 1rem auto;
+}
+.thread-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thread-item .user-info{
+    width: 50%;
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+.user-info i,h5{
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-top: 0;
+}
+.user-info i{margin-top: 5px;}
+.thread-item .question{
+    display: flex;flex-direction: column;
+}
+.thread-item .question .link-div{
+    width: 100%;
+}
+.thread-item .question .link-div a{
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+.thread-item .question p,i{
+    font-size: 1rem;
+}
+.thread-item .question{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.thread-item .question .fa-minus{
+    display: none;
+}
+.thread-item .question .answer{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    background: white;
+    border-width: 0;
+    border-left: 3px solid;
+    border-image:linear-gradient(#4facfe, #00f2fe) 0 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height .5s;
+}
+.thread-item .question .answer p{
+    padding: 5px 10px;
+}
+.thread-item .question .answer a button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: royalblue;
+    color: #ecf0f1;
+    outline: none;
+    border: 1px solid #353b48;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+.thread-item .question .answer a button:hover{
+    background-color: rgb(37, 84, 224);
+}
+
+/* click events */
+.question:target .answer{
+    height: auto;
+}
+.question:target .link-div a .fa-plus{
+   display: none;
+}
+.question:target .link-div a .fa-minus{
+    display: inline-block;
+}
+
+
+/* if no .question found on the forum on threads.php page */
+.no-que-found{
+    width: 70%;
+    margin: 10px auto;
+    background: #bdc3c7;
+    padding: 20px 5px;
+    text-align: center;
+}
+.no-que-found h1,h5{
+    font-family: "Poppins";
+}
+
+/* form to post questions */
+.question-form{
+    width: 80%;
+    max-width: 80%;
+    margin: 10px auto;
+    background: #a4b0be;
+    padding: 5px 10px;
+    text-align: center;
+}
+.question-form div{
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+.question-form .head h1{
+    font-family: "Poppins";
+    font-size: 1.1rem;
+    text-align: center;
+    
+}
+.question-form .head h5{
+    font-family: "Roboto";
+    text-align: center;
+    font-size: .9rem;
+    
+}
+.question-form div label,input,textarea{
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: 500;
+}
+.question-form div input,textarea{
+    width: 100%;
+    padding: .4rem;
+    resize: none;
+    outline: none;
+}
+.question-form div input{
+    padding: .3rem;
+}
+.question-form button{
+    margin: 5px auto;
+    padding: 5px 10px;
+    background-color: royalblue;
+    color: #ecf0f1;
+    outline: none;
+    border: 1px solid #353b48;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+/****************************************
+THREAD.php Page where answer is displayed
+*****************************************/
+.thread-head{
+    width: 70%;
+    padding: 10px 10px;
+    margin: 1rem auto;
+    background: #bdc3c7;
+}
+.comment-form{
+    width: 80%;
+    max-width: 80%;
+    background: #a4b0be;
+    padding: 5px 10px;
+}
+.comment-form h1{
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+}
+.comment-form textarea{
+    width: 80%;
+    padding: .4rem;
+    resize: none;
+    font-family: "Poppins";
+}
+.comment-form button{
+    margin: 5px auto;
+    padding: 5px 10px;
+    background-color: royalblue;
+    color: #ecf0f1;
+    outline: none;
+    border: 1px solid #353b48;
+    cursor: pointer;
+    font-family: "Montserrat";
+}

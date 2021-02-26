@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{font-size: 62.5%;scroll-behavior: smooth;}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+/* navbar */
+nav{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(51, 51, 51, 0.904);
+    border-bottom: 2px solid rgb(2, 190, 236);
+    overflow: hidden;
+}
+nav a{
+    text-decoration: none;
+}
+nav .logo{
+    font-size: 2rem;
+    color: royalblue;
+    font-weight: 900;
+    word-spacing: 3px;
+}
+nav .nav-links{
+    font-size: 1.4rem;
+    width: 30vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links a{
+    color: #fff;
+    font-weight: 500;
+}
+.nav-links a:hover{
+    color: #777;
+}
+/* hamburger */
+.hamburger{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.hamburger div{
+    margin-bottom: 2px;
+    width: 25px;
+    height: 4px;
+    background: #333;
+    border-radius: 50px;
+}
+
+/* main body */
+.container main{
+    width: 100%;
+    height: 100vh; 
+    background-image: linear-gradient(rgba(77, 50, 50, .3), rgba(0, 0, 0, .6)) ,url('./images/img3.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slider 12s infinite ease-in-out;
+}
+@keyframes slider{
+    0%{
+        background-image: linear-gradient(rgba(77, 50, 50, .3), rgba(0, 0, 0, .6)) ,url('./images/img3.jpg');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    25%{
+        background-image: linear-gradient(rgba(77, 50, 50, .3), rgba(0, 0, 0, .6)) ,url('./images/img1.jpg');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%{
+        background-image: linear-gradient(rgba(77, 50, 50, .3), rgba(0, 0, 0, .6)) ,url('./images/img2.jpg');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    75%{
+        background-image: linear-gradient(rgba(77, 50, 50, .3), rgba(0, 0, 0, .6)) ,url('./images/img4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.container main .content{
+    border: 2px solid #777;
+    padding: 1rem;
+    box-shadow: 0 0 6px 3px #333,0 0 10px 6px #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content .h1{
+    color: whitesmoke;
+    letter-spacing: 1.4px;
+    word-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 550;
+    text-shadow: 0 0 10px rgb(12, 130, 209);
+}
+.content p{
+    margin-top: .3rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.content .insta-btn{
+    margin-top: 1rem;
+    color:#fff;
+    background: linear-gradient(to bottom, rgb(192, 17, 192), rgb(231, 160, 28));
+    padding: .2rem .5rem;
+    border-radius: 50%;
+}
+.content .insta-btn:hover{
+    box-shadow: 0 0 10px 2px rgb(192, 17, 192), 0 0 10px 3px rgb(231, 160, 28);
+    transition: .5s;
+}
+
+/* about us */
+.about-us
+{
+    width: 97vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.about-us .heading{
+    text-align: center;
+    font-size: 2.3rem;
+}
+#about-me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.imgdiv{
+    width: 25%;
+    height: 35vh;
+    border: 1px solid #333;
+    background: url('./images/person.jpg');
+    background-size: 100% 100%;
+    background-position:center;
+}
+.articlediv{
+    width: 40%;
+    font-size: 1.2rem;
+}
+.articlediv article{
+    color: black;
+    word-spacing: 2px;
+}
+
+/* gallery */
+.gallery{
+    width: 95vw;
+    margin: 0 auto;
+    margin-top: .5rem;
+    background: whitesmoke;
+}
+.gallery .heading{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#gallery-items{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+#gallery-items img{
+    width: 30vw;
+    border-radius: .4rem;
+    transform: scale(.99);
+}
+#gallery-items img:hover{
+    box-shadow: 0 0 .7rem .3rem rgba(51, 51, 51, 0.664);
+    transform: scale(1.02);
+    transition: .3s;
+}
+
+
+/* contact form */
+.contact-us{
+    width: 98vw;
+    margin-top: 1.9rem;
+}
+.description{
+    margin: 0 auto;
+    text-align: center;
+}
+.description .heading{
+    font-size: 2rem;
+    word-spacing: .5rem;
+}
+.contact-us form{
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #777;
+}
+.contact-us form input{
+    width: 90%;
+    padding: .6rem;
+    margin-top: 1rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom:1px solid #333;
+}
+.contact-us form textarea{
+    width: 99%;
+    resize: none;
+    outline: none;
+    background: transparent;
+    margin-top: 4rem;
+    border: none;
+    text-align: center;
+}
+.submit-btn{
+    padding: .4rem 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: royalblue;
+}
+
+/* footer */
+footer{
+    width: 98vw;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+footer a{
+    font-size: 1.2rem;
+}
+
+
+/* media query */
+@media screen and (max-width:700px){
+    .hamburger{
+        display: block;
+    }
+    .nav-links{
+        transform: translate(150%);
+        opacity: 0;
+        transition: all .4s;
+    }
+    #gallery-items{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    #gallery-items img{
+        width: 45vw;
+    }
+}
+@media screen and (max-width:620px){
+    #about-me{
+        flex-direction: column;
+    }
+    .imgdiv{
+        width: 40vw;
+        height: 35vh;
+    }
+    .articlediv{
+        margin-top: 1rem;
+        width: 80%;
+    }
+    .contact-us form{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:550px){
+    #gallery-items{
+        grid-template-columns: 1fr;
+    }
+    #gallery-items img{
+        margin: 0 auto;
+        width: 70vw;
+    }
+}
+
+
+ /* javascript classes */
+     .show-nav{
+        height: 35vh;
+        position:  absolute;
+        top: 5.2rem;
+        background: #333;
+        transform: translate(120%);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        padding: 1rem 0;
+    }
+    .show-nav a:hover{
+        padding-right: 1rem;
+        transition: .3s;
+    }

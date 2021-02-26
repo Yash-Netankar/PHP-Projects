@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-size: 62.5%;
+    font-family: "Poppins";
+}
+
+
+/* Edit and delete modals and forms inside it */
+.edit-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.del-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.edit-modal,
+.del-modal{
+   width: 80vw;
+    padding: 1rem .5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edit-modal h2,
+.del-modal h2{
+    font-size: 1.1rem;
+}
+.edit-modal form,
+.del-modal form{
+    width: 90%;
+    padding: 1rem;
+    background: chocolate;
+    display: flex;
+    flex-direction: column;
+}
+.edit-modal form label,
+.del-modal form label{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.edit-modal form input,
+.edit-modal form textarea,
+.del-modal form input,
+.del-modal form textarea{
+    width: 80%;
+    padding: .4rem;
+    outline: none;
+    border: 1px solid #34495e;
+    border-radius: 2px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Roboto";
+    resize: none;
+}
+.edit-modal form button,
+.del-modal form button{
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: .3rem .9rem;
+    outline: none;
+    border: none;
+    font-family: "Poppins";
+    background-color: #2980b9;
+    color: #ecf0f1;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}

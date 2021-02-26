@@ -1,0 +1,73 @@
+/****************************************
+THREAD.php Page where answer is displayed
+*****************************************/
+.comment-form{
+    width: 80%;
+    max-width: 80%;
+    background: #a4b0be;
+    padding: 5px 10px;
+    margin: 10px auto;
+}
+.comment-form h1{
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+}
+.comment-form textarea{
+    width: 80%;
+    padding: .4rem;
+    resize: none;
+    font-family: "Poppins";
+    display: block;
+}
+.comment-form button{
+    margin: 5px auto;
+    padding: 5px 10px;
+    background-color: royalblue;
+    color: #ecf0f1;
+    outline: #70a1ff;
+    border: 1px solid #353b48;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+
+/* answers */
+.thread-container{
+    width: 80%;
+    max-width: 80%;
+    padding: .5rem 1rem;
+    background: #d1d8e0;
+    margin: 1rem auto;
+    cursor: text;
+}
+.thread-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thread-item .user-info{
+    width: 50%;
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+.user-info i,h5{
+    font-size: 1rem;
+    margin-left: 5px;
+    margin-top: 0;
+}
+.user-info i{margin-top: 5px;}
+.thread-item .question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thread-item .question p{
+    cursor:text;
+}
+.thread-item .question .date{
+    text-align: left;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}

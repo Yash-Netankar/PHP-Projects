@@ -1,0 +1,28 @@
+1]. first table in database named 'forum' is category including rows like,
+=> category_id, category_name, category_desc, and created_on.
+We,re fetching info from this and showing it on our cards.
+
+**************************************************************************
+
+2].second table needed named as "threads"
+=> includes thread_id, thread_title(varchar 255), thread_desc(text), thread_cat_id, thread_user_id, time(current_time).
+
+
+**************************************************************************
+
+3]. third table "comments" to store answers of users
+=> includes comment_id, comment_text(text),, thread__id, comment_by(int), comment_time(current_time).
+
+
+**************************************************************************
+
+4]. need signup table
+=> create table register(
+    rno int primary key auto_increment,
+    uname varchar(30) not null unique,
+    email varchar(255) not null unique,
+    pass varchar(25) not null,
+    cpass varchar(25) not null
+);
+
+**************************************************************************

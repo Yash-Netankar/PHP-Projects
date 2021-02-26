@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+li,a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: "Poppins";
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background:#ecf0f1;
+}
+
+.container header{
+    padding: 1rem;
+    border: 1px solid #333;
+    background: #bdc3c7;
+    box-shadow: 0px 0px 0px 0px #333;
+    display: flex;
+    flex-direction:column;
+}
+.container header .menus{
+    /* background: #95a5a6; */
+    width: 60%;
+}
+.container header .menus ul{
+    display: flex;
+    justify-content: space-between;
+}
+.file{
+    position: relative;
+}
+.file>.submenu{
+    width: 7rem;
+    position: absolute;
+    top: 100%;
+    left: -40%;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .2s;
+    background-color:#95a5a6;
+    border: 1px solid #e67e22;
+    opacity: 0;
+    pointer-events: none;
+}
+.file .submenu li{
+    margin-top: .7rem;
+}
+.file:hover .submenu{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.container header .options{
+    margin-top: 1rem;
+    width: 50%;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #95a5a6; */
+}
+.options i{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.options select{
+    outline: none;
+    border: 1px solid #333;
+    padding: .2rem .5rem;
+}
+
+/* main body */
+main{
+    width: 100vw;
+    height: 80%;
+    background:#ecf0f1;
+}
+main form{
+    width: 100%;
+    height: 100%;
+}
+main form textarea{
+    width: 100%;
+    height: 100%;
+    padding: .2rem .2rem;
+    resize: none;
+    color: #2c3e50;
+    outline: none;
+    border: 1px solid #2c3e50;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+}
+/* styling textarea scroolbar */
+textarea::-webkit-scrollbar{
+    width: .5rem;
+}
+textarea::-webkit-scrollbar-track{
+    border: 7px solid #333;
+}
+textarea::-webkit-scrollbar-thumb{
+    background: #777;
+    border-radius: 5px;
+}
+ /* hiding by default working html input[file] */
+input[type="file"]{
+    display: none;
+}
+label{cursor: pointer;}
+
+
+/* Save as modal */
+.save-as-modal{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 60vw;
+    padding: 1rem .5rem;
+    margin: 0 auto;
+    background: #c46919;
+    transition: .3s;
+    transform: scale(0);
+}
+.save-as-modal form{
+    display: flex;
+    flex-direction: column;
+}
+.save-as-modal form label{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.save-as-modal form input{
+    width: 80%;
+    outline: none;
+    padding: .3rem;
+}
+.save-as-modal form button{
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: .3rem 1rem;
+}
+.save-as-modal.show{
+    transform: scale(1);
+}
+.save-as-modal .close-modal{
+    display: block;
+    text-align: right;
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

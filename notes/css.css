@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-size: 62.5%;
+    font-family: "Poppins";
+}
+.container{
+    width:100vw;
+    position: relative;
+}
+
+nav{
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+}
+nav .logo{
+    font-size: 1.03rem;
+    letter-spacing: .4rem;
+    color: #f5cd79;
+}
+nav .navbar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .navbar li{
+    cursor: pointer;
+    font-size: 1rem;
+}
+nav .navbar li a{
+    color: #ecf0f1;
+    position: relative;
+}
+nav .navbar li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: .1rem;
+    background-color: #ecf0f1;
+    transition: width .4s;
+}
+nav .navbar li a:hover::after{
+    width: 98%;
+    opacity: 1;
+}
+
+/* styling of .main-form */
+main{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.main-form{
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.main-form label{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.main-form input,
+.main-form textarea{
+    width: 80%;
+    padding: .4rem;
+    outline: none;
+    border: 1px solid #34495e;
+    border-radius: 2px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Roboto";
+    resize: none;
+}
+.main-form button{
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: .3rem .9rem;
+    outline: none;
+    border: none;
+    font-family: "Poppins";
+    background-color: #2980b9;
+    color: #ecf0f1;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.notes{
+    padding: 1rem;
+   display: grid;
+   place-items: center;
+}
+.notes table{
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-weight: bold;
+    box-shadow: 0 0 7px 1px rgba(51, 51, 51, 0.719);
+}
+.notes table th,
+.notes table td{
+    padding: .5rem;
+    font-weight: 500;
+}
+.notes table thead tr{
+    background-color: #7f8c8d;
+    font-size: 1rem;
+    text-align: left;
+}
+.notes table thead tr td{
+    font-weight: bold;
+}
+.notes table tr{
+    border-bottom: 1px solid #95a5a6;
+}
+.notes table tr:nth-of-type(even){
+    background-color: #bdc3c7ab;
+}
+.notes table tr td .edit-del{
+    cursor: pointer;
+}
+
